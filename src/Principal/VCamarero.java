@@ -38,7 +38,7 @@ import javax.swing.table.TableModel;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
-public class Camarero extends javax.swing.JFrame {
+public class VCamarero extends javax.swing.JFrame {
 	private JPanel Panel1;
 	private JButton botonVenta;
 	private JButton botonCerrar;
@@ -69,7 +69,8 @@ public class Camarero extends javax.swing.JFrame {
 	/**
 	* Auto-generated main method to display this JFrame
 	*/
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
+
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				Camarero inst = new Camarero();
@@ -77,9 +78,10 @@ public class Camarero extends javax.swing.JFrame {
 				inst.setVisible(true);
 			}
 		});
-	}
+		
+	}*/
 	
-	public Camarero() {
+	public VCamarero() {
 		super();
 		initGUI();
 	}
@@ -157,7 +159,7 @@ public class Camarero extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("botonCerrar.mouseClicked, event="+evt);
 							//TODO add your code for botonCerrar.mouseClicked
-							new Venta().setVisible(true);
+							new VVenta().setVisible(true);
 				            setVisible(false);
 						}
 					});

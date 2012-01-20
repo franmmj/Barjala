@@ -38,7 +38,7 @@ import javax.swing.table.TableModel;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
-public class Proveedor extends javax.swing.JFrame {
+public class VProveedor extends javax.swing.JFrame {
 	private JPanel Panel1;
 	private JButton botonVenta;
 	private JButton botonCerrar;
@@ -69,7 +69,7 @@ public class Proveedor extends javax.swing.JFrame {
 	/**
 	* Auto-generated main method to display this JFrame
 	*/
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				Proveedor inst = new Proveedor();
@@ -78,8 +78,8 @@ public class Proveedor extends javax.swing.JFrame {
 			}
 		});
 	}
-	
-	public Proveedor() {
+*/	
+	public VProveedor() {
 		super();
 		initGUI();
 	}
@@ -157,7 +157,7 @@ public class Proveedor extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("botonCerrar.mouseClicked, event="+evt);
 							//TODO add your code for botonCerrar.mouseClicked
-							new Venta().setVisible(true);
+							new VVenta().setVisible(true);
 				            setVisible(false);
 						}
 					});

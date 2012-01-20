@@ -1,10 +1,10 @@
 
-public class Mercaderia {
+public class Mercaderia extends ControlStock{
 	float pvp;
 
 public Mercaderia()
 	{
-	
+	super();
 	}
 
 public float getPvp() {

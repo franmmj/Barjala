@@ -1,9 +1,9 @@
 
-public class Camarero {
+public class Camarero extends Personal{
 
 	
 public Camarero()
 	{
-	
+		super();
 	}
 }

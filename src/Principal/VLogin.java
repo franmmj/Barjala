@@ -32,7 +32,7 @@ import javax.swing.table.TableModel;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
-public class Login extends javax.swing.JFrame {
+public class VLogin extends javax.swing.JFrame {
 	private JPanel Panel1;
 	private JButton botonVenta;
 	private JButton botonCerrar;
@@ -49,7 +49,7 @@ public class Login extends javax.swing.JFrame {
 	/**
 	* Auto-generated main method to display this JFrame
 	*/
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				Login inst = new Login();
@@ -57,9 +57,9 @@ public class Login extends javax.swing.JFrame {
 				inst.setVisible(true);
 			}
 		});
-	}
+	}*/
 	
-	public Login() {
+	public VLogin() {
 		super();
 		initGUI();
 	}
@@ -161,7 +161,7 @@ public class Login extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton1.mouseClicked, event="+evt);
 							//TODO add your code for jButton1.mouseClicked
-							new Venta().setVisible(true);
+							new VVenta().setVisible(true);
 				            setVisible(false);
 						}
 					});
@@ -174,7 +174,7 @@ public class Login extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton2.mouseClicked, event="+evt);
 							//TODO add your code for jButton2.mouseClicked
-							new Venta().setVisible(true);
+							new VVenta().setVisible(true);
 				            setVisible(false);
 						}
 					});
@@ -187,7 +187,7 @@ public class Login extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton3.mouseClicked, event="+evt);
 							//TODO add your code for jButton3.mouseClicked
-							new Venta().setVisible(true);
+							new VVenta().setVisible(true);
 				            setVisible(false);
 						}
 					});
@@ -200,7 +200,7 @@ public class Login extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton4.mouseClicked, event="+evt);
 							//TODO add your code for jButton4.mouseClicked
-							new Venta().setVisible(true);
+							new VVenta().setVisible(true);
 				            setVisible(false);
 						}
 					});

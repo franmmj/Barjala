@@ -32,7 +32,7 @@ import javax.swing.table.TableModel;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
-public class Venta extends javax.swing.JFrame {
+public class VVenta extends javax.swing.JFrame {
 	private JPanel Panel1;
 	private JButton botonVenta;
 	private JButton ocho;
@@ -89,7 +89,7 @@ public class Venta extends javax.swing.JFrame {
 	/**
 	* Auto-generated main method to display this JFrame
 	*/
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				Venta inst = new Venta();
@@ -97,9 +97,9 @@ public class Venta extends javax.swing.JFrame {
 				inst.setVisible(true);
 			}
 		});
-	}
+	}*/
 	
-	public Venta() {
+	public VVenta() {
 		super();
 		initGUI();
 	}
@@ -160,7 +160,7 @@ public class Venta extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("botonCamareros.mouseClicked, event="+evt);
 							//TODO add your code for botonCamareros.mouseClickedisi
-							new Camarero().setVisible(true);
+							new VCamarero().setVisible(true);
 				            setVisible(false);
 							//Camarero.setVisible(true);
 							//Venta.setVisible(false);
@@ -178,7 +178,7 @@ public class Venta extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("botonProveedores.mouseClicked, event="+evt);
 							//TODO add your code for botonProveedores.mouseClicked
-							new Proveedor().setVisible(true);
+							new VProveedor().setVisible(true);
 				            setVisible(false);
 						}
 					});
@@ -198,7 +198,7 @@ public class Venta extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("botonCerrar.mouseClicked, event="+evt);
 							//TODO add your code for botonCerrar.mouseClicked
-							new Login().setVisible(true);
+							new VLogin().setVisible(true);
 				            setVisible(false);
 						
 						}

@@ -1,5 +1,5 @@
 
-public class Producto {
+public class Producto extends Mercaderia{
 	int centrilitros;
 	Boolean retornable;
 	float alcohol;
@@ -7,7 +7,7 @@ public class Producto {
 	
 public Producto()
 	{
-	
+	super();
 	}
 
 public int getCentrilitros() {
