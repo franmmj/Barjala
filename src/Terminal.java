@@ -1,4 +1,5 @@
 
+
 public class Terminal {
 	int id;
 	String ubicacion;

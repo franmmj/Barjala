@@ -1,4 +1,5 @@
 
+
 public class Mercaderia extends ControlStock{
 	float pvp;
 

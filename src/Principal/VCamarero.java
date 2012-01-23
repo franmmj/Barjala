@@ -1,4 +1,6 @@
 package Principal;
+
+
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import info.clearthought.layout.TableLayout;

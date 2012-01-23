@@ -1,4 +1,5 @@
 
+
 public class Proveedor {
 	String nombre;
 	int telefono;

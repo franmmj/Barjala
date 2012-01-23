@@ -1,14 +1,16 @@
+
 public class Dni {
 	String numero;
 	String letra;
 
 	public Dni(String dni) {
-		if (validar(dni)) {
-			this.numero = dni.substring(0, dni.length() - 1);
-			this.letra = dni.substring(dni.length() - 1, 1);
-		} else {
+		//if (validar(dni)) {
+
+		this.numero = new String(dni.substring(0,dni.length() -1));
+		this.letra = new String(dni.substring(dni.length() - 1, dni.length()));
+		/*} else {
 			System.out.println("DNI erróneo");
-		}
+		}*/
 
 	}
 

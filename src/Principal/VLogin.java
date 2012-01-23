@@ -1,4 +1,10 @@
 package Principal;
+
+
+
+
+
+
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import info.clearthought.layout.TableLayout;
@@ -156,7 +162,7 @@ public class VLogin extends javax.swing.JFrame {
 				{
 					jButton1 = new JButton();
 					jPanel1.add(jButton1);
-					jButton1.setText("jButton1");
+					jButton1.setText("Informacion.camareros[0].getNombre()");
 					jButton1.addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton1.mouseClicked, event="+evt);
@@ -187,8 +193,8 @@ public class VLogin extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton3.mouseClicked, event="+evt);
 							//TODO add your code for jButton3.mouseClicked
-							new VVenta().setVisible(true);
-				            setVisible(false);
+							//new VVenta().setVisible(true);
+				            //setVisible(false);
 						}
 					});
 				}
@@ -200,8 +206,8 @@ public class VLogin extends javax.swing.JFrame {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton4.mouseClicked, event="+evt);
 							//TODO add your code for jButton4.mouseClicked
-							new VVenta().setVisible(true);
-				            setVisible(false);
+							//new VVenta().setVisible(true);
+				            //setVisible(false);
 						}
 					});
 				}
