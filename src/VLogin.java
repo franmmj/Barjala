@@ -163,7 +163,8 @@ public class VLogin extends javax.swing.JFrame {
 				{
 					jButton1 = new JButton();
 					jPanel1.add(jButton1);
-					jButton1.setText("Informacion.camareros[0].getNombre()");
+					
+					jButton1.setText(" ");
 					jButton1.addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton1.mouseClicked, event="+evt);
