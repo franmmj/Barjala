@@ -171,7 +171,7 @@ public class VLogin extends javax.swing.JFrame {
 				{
 					jButton2 = new JButton();
 					jPanel1.add(jButton2);
-					jButton2.setText("jButton2");
+					jButton2.setText(info.camareros[1].getNombre());
 					jButton2.addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton2.mouseClicked, event="+evt);
@@ -184,7 +184,7 @@ public class VLogin extends javax.swing.JFrame {
 				{
 					jButton3 = new JButton();
 					jPanel1.add(jButton3);
-					jButton3.setText("jButton3");
+					jButton3.setText(info.camareros[2].getNombre());
 					jButton3.addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton3.mouseClicked, event="+evt);
@@ -197,7 +197,7 @@ public class VLogin extends javax.swing.JFrame {
 				{
 					jButton4 = new JButton();
 					jPanel1.add(jButton4);
-					jButton4.setText("jButton4");
+					jButton4.setText(info.camareros[3].getNombre());
 					jButton4.addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton4.mouseClicked, event="+evt);

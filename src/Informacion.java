@@ -6,10 +6,19 @@ public class Informacion {
 	public Producto[] productos;
 	
 	Informacion() {
-		camareros = new Camarero[1];
+		camareros = new Camarero[4];
 		camareros[0] = new Camarero();
 		camareros[0].setDni(new Dni("45735685R"));
-		camareros[0].setNombre("Albi asdasdas");
+		camareros[0].setNombre("Camarero 1");
+		camareros[1] = new Camarero();
+		camareros[1].setDni(new Dni("30968143T"));
+		camareros[1].setNombre("Camarero 2");
+		camareros[2] = new Camarero();
+		camareros[2].setDni(new Dni("30968144R"));
+		camareros[2].setNombre("Camarero 3");
+		camareros[3] = new Camarero();
+		camareros[3].setDni(new Dni("30428133F"));
+		camareros[3].setNombre("Camarero 4");
 		proveedores = new Proveedor[1];
 		proveedores[0] = new Proveedor();
 		proveedores[0].setCif("D12345324");

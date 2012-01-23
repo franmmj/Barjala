@@ -43,30 +43,7 @@ public class VVenta extends javax.swing.JFrame {
 	private JButton ocho;
 	private JButton nueve;
 	private JButton total;
-	private JButton jButton24;
-	private JButton jButton23;
-	private JButton jButton22;
-	private JButton jButton21;
-	private JButton jButton20;
-	private JButton jButton19;
-	private JButton jButton18;
-	private JButton jButton17;
-	private JButton jButton16;
-	private JButton jButton15;
-	private JButton jButton14;
-	private JButton jButton13;
-	private JButton jButton12;
-	private JButton jButton11;
-	private JButton jButton10;
-	private JButton jButton9;
-	private JButton jButton8;
-	private JButton jButton7;
-	private JButton jButton6;
-	private JButton jButton5;
-	private JButton jButton4;
-	private JButton jButton3;
-	private JButton jButton2;
-	private JButton jButton1;
+	private JButton jButton[];
 	private JTable Tabla;
 	private JButton ce;
 	private JButton cero;
@@ -223,7 +200,21 @@ public class VVenta extends javax.swing.JFrame {
 				Panel2.setBounds(199, 6, 589, 267);
 				Panel2.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
 				Panel2.setBackground(new java.awt.Color(239,107,69));
-				{
+				jButton=new JButton[24];
+				for (int i=0;i<24;i++)
+					{
+					jButton[i]=new JButton();
+					Panel2.add(jButton[i]);
+					if (info.productos.length>i)
+						{
+						jButton[i].setText(info.productos[i].nombre);
+						}
+					else
+						{
+						jButton[i].setText(" ");
+						}
+					}
+			/*	{
 					jButton1 = new JButton();
 					Panel2.add(jButton1);
 					jButton1.setText("jButton1");
@@ -342,7 +333,7 @@ public class VVenta extends javax.swing.JFrame {
 					jButton24 = new JButton();
 					Panel2.add(jButton24);
 					jButton24.setText("jButton24");
-				}
+				}*/
 			}
 			{
 				Panel3 = new JPanel();
@@ -582,7 +573,8 @@ public class VVenta extends javax.swing.JFrame {
 				{	
 					TableModel TablaModel = 
 						new DefaultTableModel(
-								new String[][] { { "Cantidad", "Producto", "Precio", "Subtotal" } },
+								new String[][] { { "Cantidad1", "Producto", "Precio", "Subtotal" },{ "Cantidad1", "Producto", "Precio", "Subtotal" } },
+							
 								new String[] { "Cantidad", "Producto", "Precio", "Subtotal" });
 					Tabla = new JTable();
 					TableLayout TablaLayout1 = new TableLayout(new double[][] {{TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL}, {TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL}});
