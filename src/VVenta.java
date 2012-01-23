@@ -110,8 +110,9 @@ public class VVenta extends javax.swing.JFrame {
 	}
 	public String c="";	
 	public void initGUI() {
-	
+		Informacion info = new Informacion();
 		try {
+			
 			getContentPane().setLayout(null);
 			this.setTitle("Tpv BarJala Venta");
 			this.setName("Principal");

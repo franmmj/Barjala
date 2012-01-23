@@ -90,6 +90,7 @@ public class VCamarero extends javax.swing.JFrame {
 	}
 	
 	public void initGUI() {
+		Informacion info = new Informacion();
 		try {
 			getContentPane().setLayout(null);
 			this.setTitle("Tpv BarJala Camarero");

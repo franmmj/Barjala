@@ -1,9 +1,9 @@
 
 
 public class Informacion {
-	public static Camarero[] camareros;
-	public static Proveedor[] proveedores;
-	public static Producto[] productos;
+	public Camarero[] camareros;
+	public Proveedor[] proveedores;
+	public Producto[] productos;
 	
 	Informacion() {
 		camareros = new Camarero[1];

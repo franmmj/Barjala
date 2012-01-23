@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import info.clearthought.layout.TableLayout;
@@ -72,6 +65,7 @@ public class VLogin extends javax.swing.JFrame {
 	}
 	
 	private void initGUI() {
+		Informacion info = new Informacion();
 		try {
 			getContentPane().setLayout(null);
 			this.setTitle("Tpv BarJala Login");
@@ -164,7 +158,7 @@ public class VLogin extends javax.swing.JFrame {
 					jButton1 = new JButton();
 					jPanel1.add(jButton1);
 					
-					jButton1.setText(" ");
+					jButton1.setText(info.camareros[0].getNombre());
 					jButton1.addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
 							System.out.println("jButton1.mouseClicked, event="+evt);

@@ -1,13 +1,13 @@
 
 import java.util.*;
 public class Personal {
-	Dni dni;
-	String nombre;
-	Date fechaNacimiento;
-	char sexo;
-	int telefono;
-	String correoElectronico;
-	String nss;
+	public Dni dni;
+	public String nombre;
+	public Date fechaNacimiento;
+	public char sexo;
+	public int telefono;
+	public String correoElectronico;
+	public String nss;
 	
 
 public Personal()

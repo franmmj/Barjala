@@ -89,7 +89,9 @@ public class VProveedor extends javax.swing.JFrame {
 	}
 	
 	private void initGUI() {
+		Informacion info = new Informacion();
 		try {
+			
 			getContentPane().setLayout(null);
 			this.setTitle("Tpv BarJala Proveedor");
 			this.setName("Principal");
