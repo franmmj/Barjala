@@ -44,7 +44,7 @@ public class VVenta extends javax.swing.JFrame {
 	private JButton nueve;
 	private JButton total;
 	private JButton jButton[];
-	private JTable Tabla;
+	//private JTable Tabla;
 	private JButton ce;
 	private JButton cero;
 	private JPanel panel6;
@@ -67,6 +67,9 @@ public class VVenta extends javax.swing.JFrame {
 	private JButton botonProveedores;
 	private JButton botonCamareros;
 	private JButton botonPedido;
+	private JTable Tabla;
+	private DefaultTableModel TablaModel;
+	private Informacion info;
 
 	/**
 	* Auto-generated main method to display this JFrame
@@ -87,7 +90,7 @@ public class VVenta extends javax.swing.JFrame {
 	}
 	public String c="";	
 	public void initGUI() {
-		Informacion info = new Informacion();
+		info = new Informacion();
 		try {
 			
 			getContentPane().setLayout(null);
@@ -205,15 +208,30 @@ public class VVenta extends javax.swing.JFrame {
 					{
 					jButton[i]=new JButton();
 					Panel2.add(jButton[i]);
-					if (info.productos.length>i)
+					if (info.productos.length>=i)
 						{
 						jButton[i].setText(info.productos[i].nombre);
 						}
 					else
 						{
 						jButton[i].setText(" ");
+						
 						}
 					}
+				
+				jButton[0].addMouseListener(new MouseAdapter() {
+					public void mouseClicked(MouseEvent evt) {
+						System.out.println("jButton[0].mouseClicked, event="+evt);
+						//TODO add your code for jButton[0].mouseClicked
+						if(Pantalla.getText().isEmpty())
+							TablaModel.addRow(new Object[]{"1",info.productos[0].nombre,info.productos[0].pvp,
+									info.productos[0].pvp});
+						else
+							TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[0].nombre,info.productos[0].pvp,
+								info.productos[0].pvp*new Integer(Pantalla.getText())});
+					}
+				});
+				
 			/*	{
 					jButton1 = new JButton();
 					Panel2.add(jButton1);
@@ -571,28 +589,34 @@ public class VVenta extends javax.swing.JFrame {
 				Panel4.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
 				Panel4.setBackground(new java.awt.Color(239,107,69));
 				{	
-					TableModel TablaModel = 
-						new DefaultTableModel(
-								new String[][] { { "Cantidad1", "Producto", "Precio", "Subtotal" },{ "Cantidad1", "Producto", "Precio", "Subtotal" } },
-							
-								new String[] { "Cantidad", "Producto", "Precio", "Subtotal" });
-					Tabla = new JTable();
-					TableLayout TablaLayout1 = new TableLayout(new double[][] {{TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL}, {TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL}});
-					TablaLayout1.setHGap(4);
-					TablaLayout1.setVGap(4);
-					GridBagLayout TablaLayout = new GridBagLayout();
-					TablaLayout.rowWeights = new double[] {0.1, 0.1, 0.1, 0.1};
-					TablaLayout.rowHeights = new int[] {7, 7, 7, 7};
-					TablaLayout.columnWeights = new double[] {0.1, 0.1, 0.1, 0.1};
-					TablaLayout.columnWidths = new int[] {7, 7, 7, 7};
-					Tabla.setLayout(TablaLayout1);
+					
+					TablaModel = new DefaultTableModel();
+					Tabla = new JTable(TablaModel);
+					TablaModel.addColumn("Cantidad");
+					TablaModel.addColumn("Producto");
+					TablaModel.addColumn("Precio");
+					TablaModel.addColumn("Subtotal");
+					//Tabla = new JTable();
+					//TableLayout TablaLayout1 = new TableLayout(new double[][] {{TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL}, {TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL, TableLayout.FILL}});
+					//TablaLayout1.setHGap(4);
+					//TablaLayout1.setVGap(4);
+					//GridBagLayout TablaLayout = new GridBagLayout();
+					//TablaLayout.rowWeights = new double[] {0.1, 0.1, 0.1, 0.1};
+					//TablaLayout.rowHeights = new int[] {7, 7, 7, 7};
+					//TablaLayout.columnWeights = new double[] {0.1, 0.1, 0.1, 0.1};
+					//TablaLayout.columnWidths = new int[] {7, 7, 7, 7};
+					//Tabla.setLayout(TablaLayout1);
 					Panel4.add(Tabla);
-					Tabla.setModel(TablaModel);
+					//String v[]={"Cantidad 2", "Producto 2", "Precio 2", "Subtotal 2"};
+					//TablaModel = TablaModel +  v;
+					//Tabla.setModel(TablaModel);
 					Tabla.setPreferredSize(new java.awt.Dimension(267, 263));
 					Tabla.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
 					Tabla.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 					Tabla.setAutoCreateColumnsFromModel(false);
 					Tabla.setBackground(new java.awt.Color(241,236,126));
+					TablaModel.addRow(new Object[]{"Cantidad","Producto","Precio","Subtotal"});
+					
 				}
 			}
 			this.setSize(800, 600);

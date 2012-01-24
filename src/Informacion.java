@@ -23,12 +23,12 @@ public class Informacion {
 		proveedores[0] = new Proveedor();
 		proveedores[0].setCif("D12345324");
 		proveedores[0].setNombre("ASD SA");
-		productos = new Producto[3];
-		for(int i = 0; i< 3; i++) {
+		productos = new Producto[24];
+		for(int i = 0; i<24; i++) {
 			productos[i] = new Producto();
 			productos[i].setId(i);
 			productos[i].setNombre("producto"+i);
-			productos[i].setPvp((float)(i*1.5));
+			productos[i].setPvp((float)((i+1)*1.5));
 			productos[i].setProveedor(proveedores[0]);
 		}
 	}
