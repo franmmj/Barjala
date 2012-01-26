@@ -1,20 +1,22 @@
 
 
 public class LineaPedido {
-	ControlStock item;
+	Producto item;
 	int cantidad;
 	float subtotal;
 	
-public LineaPedido()
+public LineaPedido(Producto item, int cantidad)
 	{
-	
+	this.item = item;
+	this.cantidad = cantidad;
+	this.subtotal = item.getPvp() * cantidad;
 	}
 
 public ControlStock getItem() {
 	return item;
 }
 
-public void setItem(ControlStock item) {
+public void setItem(Producto item) {
 	this.item = item;
 }
 
