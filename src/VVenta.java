@@ -71,7 +71,8 @@ public class VVenta extends javax.swing.JFrame {
 	private DefaultTableModel TablaModel;
 	private Informacion info;
 	private float to=0;
-
+	private Ticket ticket;
+	
 	/**
 	* Auto-generated main method to display this JFrame
 	*/
@@ -88,6 +89,7 @@ public class VVenta extends javax.swing.JFrame {
 	public VVenta() {
 		super();
 		initGUI();
+		ticket= new Ticket();
 	}
 	public String c="";	
 	public void initGUI() {
@@ -225,18 +227,27 @@ public class VVenta extends javax.swing.JFrame {
 					
 						System.out.println("jButton[0].mouseClicked, event="+evt);
 						//TODO add your code for jButton[0].mouseClicked
+						LineaPedido aux;
 						if(Pantalla.getText().isEmpty())
 						{
-							TablaModel.addRow(new Object[]{"1",info.productos[0].nombre,info.productos[0].pvp,
+							/*TablaModel.addRow(new Object[]{"1",info.productos[0].nombre,info.productos[0].pvp,
 									info.productos[0].pvp});
-							to=to+info.productos[0].pvp;
+							to=to+info.productos[0].pvp;*/
+							
+							aux=new LineaPedido(info.productos[0], 1);
+						
 						}
 						else
 						{
-							TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[0].nombre,info.productos[0].pvp,
+							/*TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[0].nombre,info.productos[0].pvp,
 								info.productos[0].pvp*new Integer(Pantalla.getText())});
-							to=to+(info.productos[0].pvp)*new Float(Pantalla.getText());
+							to=to+(info.productos[0].pvp)*new Float(Pantalla.getText());*/
+							aux=new LineaPedido(info.productos[0], new Integer(Pantalla.getText()));
+							
 						}
+						Pantalla.setText("");
+						TablaModel.addRow(aux.getRow());
+						ticket.anyadirLineaPedido(aux);
 					}
 				});
 					
@@ -322,6 +333,108 @@ public class VVenta extends javax.swing.JFrame {
 						}
 					});
 					
+					
+					jButton[5].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[5].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[5].nombre,info.productos[5].pvp,
+										info.productos[5].pvp});
+								to=to+info.productos[5].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[5].nombre,info.productos[5].pvp,
+									info.productos[5].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[5].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
+					
+					
+					jButton[6].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[6].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[6].nombre,info.productos[6].pvp,
+										info.productos[6].pvp});
+								to=to+info.productos[6].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[6].nombre,info.productos[6].pvp,
+									info.productos[6].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[6].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
+					
+					
+					jButton[7].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[7].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[7].nombre,info.productos[7].pvp,
+										info.productos[7].pvp});
+								to=to+info.productos[7].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[7].nombre,info.productos[7].pvp,
+									info.productos[7].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[7].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
+					
+					jButton[8].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[8].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[8].nombre,info.productos[8].pvp,
+										info.productos[8].pvp});
+								to=to+info.productos[8].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[8].nombre,info.productos[8].pvp,
+									info.productos[8].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[8].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
+					
+					jButton[9].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[9].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[9].nombre,info.productos[9].pvp,
+										info.productos[9].pvp});
+								to=to+info.productos[9].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[9].nombre,info.productos[9].pvp,
+									info.productos[9].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[9].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
 					
 			/*	{
 					jButton1 = new JButton();
@@ -674,7 +787,7 @@ public class VVenta extends javax.swing.JFrame {
 							public void mouseClicked(MouseEvent evt) {
 								System.out.println("total.mouseClicked, event="+evt);
 								//TODO add your code for total.mouseClicked
-								String c=" "+to;
+								String c="Total = "+ticket.total;
 								Pantalla.setText(c);
 							}
 						});

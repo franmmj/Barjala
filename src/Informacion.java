@@ -78,8 +78,8 @@ public class Informacion {
 			for(int i = 10; i<24; i++) {	
 				productos[i] = new Producto();
 				productos[i].setId(i);
-				productos[i].setNombre("Producto");
-				productos[i].setPvp((float)(3));
+				productos[i].setNombre(" ");
+				productos[i].setPvp((float)(0));
 				productos[i].setProveedor(proveedores[0]);
 			}
 	}
