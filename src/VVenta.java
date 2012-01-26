@@ -216,7 +216,6 @@ public class VVenta extends javax.swing.JFrame {
 					if (info.productos.length>i)
 						{
 						botones.get(i).setText(info.productos[i].nombre);
-						System.out.println(i + "/" + info.productos.length);
 						botones.get(i).addMouseListener(new MouseAdapter() {
 							public void mouseClicked(MouseEvent evt) {
 								JButton b = (JButton) evt.getSource();
