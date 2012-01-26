@@ -23,7 +23,7 @@ public class Informacion {
 		proveedores[0] = new Proveedor();
 		proveedores[0].setCif("D12345324");
 		proveedores[0].setNombre("ASD SA");
-		productos = new Producto[24];
+		productos = new Producto[10];
 	
 			productos[0] = new Producto();
 			productos[0].setId(0);
@@ -75,13 +75,6 @@ public class Informacion {
 			productos[9].setNombre("Bacardi");
 			productos[9].setPvp((float)(3));
 			productos[9].setProveedor(proveedores[0]);
-			for(int i = 10; i<24; i++) {	
-				productos[i] = new Producto();
-				productos[i].setId(i);
-				productos[i].setNombre(" ");
-				productos[i].setPvp((float)(0));
-				productos[i].setProveedor(proveedores[0]);
-			}
 	}
 	}
 	

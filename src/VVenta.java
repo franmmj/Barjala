@@ -14,6 +14,7 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Vector;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -43,7 +44,7 @@ public class VVenta extends javax.swing.JFrame {
 	private JButton ocho;
 	private JButton nueve;
 	private JButton total;
-	private JButton jButton[];
+	private Vector<JButton> botones;
 	//private JTable Tabla;
 	private JButton ce;
 	private JButton cero;
@@ -72,6 +73,7 @@ public class VVenta extends javax.swing.JFrame {
 	private Informacion info;
 	private float to=0;
 	private Ticket ticket;
+	private int i = 0;
 	
 	/**
 	* Auto-generated main method to display this JFrame
@@ -206,22 +208,39 @@ public class VVenta extends javax.swing.JFrame {
 				Panel2.setBounds(199, 6, 589, 267);
 				Panel2.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
 				Panel2.setBackground(new java.awt.Color(239,107,69));
-				jButton=new JButton[24];
-				for (int i=0;i<24;i++)
+				botones=new Vector<JButton>();
+				for (i=0;i<24;i++)
 					{
-					jButton[i]=new JButton();
-					Panel2.add(jButton[i]);
-					if (info.productos.length>=i)
+					botones.add(new JButton());
+					Panel2.add(botones.get(i));
+					if (info.productos.length>i)
 						{
-						jButton[i].setText(info.productos[i].nombre);
+						botones.get(i).setText(info.productos[i].nombre);
+						System.out.println(i + "/" + info.productos.length);
+						botones.get(i).addMouseListener(new MouseAdapter() {
+							public void mouseClicked(MouseEvent evt) {
+								JButton b = (JButton) evt.getSource();
+								i = botones.indexOf(b);
+								System.out.println("jButton["+i+"].mouseClicked, event="+evt);
+								LineaPedido aux;
+								if(Pantalla.getText().isEmpty()){
+									aux = new LineaPedido(info.productos[i], 1);
+								}else {
+									aux = new LineaPedido(info.productos[i], new Integer(Pantalla.getText()));
+								}
+								ticket.anyadirLineaPedido(aux);
+								TablaModel.addRow(aux.getRow());
+								Pantalla.setText("");
+							}
+						});
 						}
 					else
 						{
-						jButton[i].setText(" ");
+						botones.get(i).setText(" ");
 						
 						}
 					}
-			
+			/*
 					jButton[0].addMouseListener(new MouseAdapter() {
 					public void mouseClicked(MouseEvent evt) {
 					
@@ -417,7 +436,7 @@ public class VVenta extends javax.swing.JFrame {
 							ticket.anyadirLineaPedido(aux);
 						}
 					});
-					
+					*/
 			/*	{
 					jButton1 = new JButton();
 					Panel2.add(jButton1);
