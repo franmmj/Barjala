@@ -70,6 +70,7 @@ public class VVenta extends javax.swing.JFrame {
 	private JTable Tabla;
 	private DefaultTableModel TablaModel;
 	private Informacion info;
+	private float to=0;
 
 	/**
 	* Auto-generated main method to display this JFrame
@@ -218,20 +219,110 @@ public class VVenta extends javax.swing.JFrame {
 						
 						}
 					}
-				
-				jButton[0].addMouseListener(new MouseAdapter() {
+			
+					jButton[0].addMouseListener(new MouseAdapter() {
 					public void mouseClicked(MouseEvent evt) {
+					
 						System.out.println("jButton[0].mouseClicked, event="+evt);
 						//TODO add your code for jButton[0].mouseClicked
 						if(Pantalla.getText().isEmpty())
+						{
 							TablaModel.addRow(new Object[]{"1",info.productos[0].nombre,info.productos[0].pvp,
 									info.productos[0].pvp});
+							to=to+info.productos[0].pvp;
+						}
 						else
+						{
 							TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[0].nombre,info.productos[0].pvp,
 								info.productos[0].pvp*new Integer(Pantalla.getText())});
+							to=to+(info.productos[0].pvp)*new Float(Pantalla.getText());
+						}
 					}
 				});
+					
+					jButton[1].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[1].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[1].nombre,info.productos[1].pvp,
+										info.productos[1].pvp});
+								to=to+info.productos[1].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[1].nombre,info.productos[1].pvp,
+									info.productos[1].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[1].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
 				
+					
+					jButton[2].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[2].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[2].nombre,info.productos[2].pvp,
+										info.productos[2].pvp});
+								to=to+info.productos[2].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[2].nombre,info.productos[2].pvp,
+									info.productos[2].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[2].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
+					
+					jButton[3].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[3].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[3].nombre,info.productos[3].pvp,
+										info.productos[3].pvp});
+								to=to+info.productos[3].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[3].nombre,info.productos[3].pvp,
+									info.productos[3].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[3].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
+					
+					
+					jButton[4].addMouseListener(new MouseAdapter() {
+						public void mouseClicked(MouseEvent evt) {
+						
+							System.out.println("jButton[4].mouseClicked, event="+evt);
+							//TODO add your code for jButton[0].mouseClicked
+							if(Pantalla.getText().isEmpty())
+							{
+								TablaModel.addRow(new Object[]{"1",info.productos[4].nombre,info.productos[4].pvp,
+										info.productos[4].pvp});
+								to=to+info.productos[4].pvp;
+							}
+							else
+							{
+								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[4].nombre,info.productos[4].pvp,
+									info.productos[4].pvp*new Integer(Pantalla.getText())});
+								to=to+(info.productos[4].pvp)*new Float(Pantalla.getText());
+							}
+						}
+					});
+					
+					
 			/*	{
 					jButton1 = new JButton();
 					Panel2.add(jButton1);
@@ -579,6 +670,14 @@ public class VVenta extends javax.swing.JFrame {
 						total = new JButton();
 						panel6.add(total);
 						total.setText("Total");
+						total.addMouseListener(new MouseAdapter() {
+							public void mouseClicked(MouseEvent evt) {
+								System.out.println("total.mouseClicked, event="+evt);
+								//TODO add your code for total.mouseClicked
+								String c=" "+to;
+								Pantalla.setText(c);
+							}
+						});
 					}
 				}
 			}
