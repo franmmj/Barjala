@@ -37,12 +37,12 @@ public class Informacion {
 			productos[1].setProveedor(proveedores[0]);
 			productos[2] = new Producto();
 			productos[2].setId(2);
-			productos[2].setNombre("Fanta Naranja");
+			productos[2].setNombre("Naranja");
 			productos[2].setPvp((float)(1));
 			productos[2].setProveedor(proveedores[0]);
 			productos[3] = new Producto();
 			productos[3].setId(3);
-			productos[3].setNombre("Fanta Limon");
+			productos[3].setNombre("Limon");
 			productos[3].setPvp((float)(1));
 			productos[3].setProveedor(proveedores[0]);
 			productos[4] = new Producto();

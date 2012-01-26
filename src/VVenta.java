@@ -230,20 +230,11 @@ public class VVenta extends javax.swing.JFrame {
 						LineaPedido aux;
 						if(Pantalla.getText().isEmpty())
 						{
-							/*TablaModel.addRow(new Object[]{"1",info.productos[0].nombre,info.productos[0].pvp,
-									info.productos[0].pvp});
-							to=to+info.productos[0].pvp;*/
-							
 							aux=new LineaPedido(info.productos[0], 1);
-						
 						}
 						else
 						{
-							/*TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[0].nombre,info.productos[0].pvp,
-								info.productos[0].pvp*new Integer(Pantalla.getText())});
-							to=to+(info.productos[0].pvp)*new Float(Pantalla.getText());*/
 							aux=new LineaPedido(info.productos[0], new Integer(Pantalla.getText()));
-							
 						}
 						Pantalla.setText("");
 						TablaModel.addRow(aux.getRow());
@@ -253,186 +244,177 @@ public class VVenta extends javax.swing.JFrame {
 					
 					jButton[1].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[1].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[1].nombre,info.productos[1].pvp,
-										info.productos[1].pvp});
-								to=to+info.productos[1].pvp;
+								aux=new LineaPedido(info.productos[1], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[1].nombre,info.productos[1].pvp,
-									info.productos[1].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[1].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[1], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 				
 					
 					jButton[2].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[2].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[2].nombre,info.productos[2].pvp,
-										info.productos[2].pvp});
-								to=to+info.productos[2].pvp;
+								aux=new LineaPedido(info.productos[2], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[2].nombre,info.productos[2].pvp,
-									info.productos[2].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[2].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[2], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 					
 					jButton[3].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[3].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[3].nombre,info.productos[3].pvp,
-										info.productos[3].pvp});
-								to=to+info.productos[3].pvp;
+								aux=new LineaPedido(info.productos[3], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[3].nombre,info.productos[3].pvp,
-									info.productos[3].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[3].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[3], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 					
 					
 					jButton[4].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[4].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[4].nombre,info.productos[4].pvp,
-										info.productos[4].pvp});
-								to=to+info.productos[4].pvp;
+								aux=new LineaPedido(info.productos[4], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[4].nombre,info.productos[4].pvp,
-									info.productos[4].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[4].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[4], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 					
 					
 					jButton[5].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[5].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[5].nombre,info.productos[5].pvp,
-										info.productos[5].pvp});
-								to=to+info.productos[5].pvp;
+								aux=new LineaPedido(info.productos[5], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[5].nombre,info.productos[5].pvp,
-									info.productos[5].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[5].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[5], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 					
 					
 					jButton[6].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[6].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[6].nombre,info.productos[6].pvp,
-										info.productos[6].pvp});
-								to=to+info.productos[6].pvp;
+								aux=new LineaPedido(info.productos[6], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[6].nombre,info.productos[6].pvp,
-									info.productos[6].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[6].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[6], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 					
 					
 					jButton[7].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[7].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[7].nombre,info.productos[7].pvp,
-										info.productos[7].pvp});
-								to=to+info.productos[7].pvp;
+								aux=new LineaPedido(info.productos[7], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[7].nombre,info.productos[7].pvp,
-									info.productos[7].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[7].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[7], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 					
 					jButton[8].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[8].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[8].nombre,info.productos[8].pvp,
-										info.productos[8].pvp});
-								to=to+info.productos[8].pvp;
+								aux=new LineaPedido(info.productos[8], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[8].nombre,info.productos[8].pvp,
-									info.productos[8].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[8].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[8], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 					
 					jButton[9].addMouseListener(new MouseAdapter() {
 						public void mouseClicked(MouseEvent evt) {
-						
+							LineaPedido aux;
 							System.out.println("jButton[9].mouseClicked, event="+evt);
 							//TODO add your code for jButton[0].mouseClicked
 							if(Pantalla.getText().isEmpty())
 							{
-								TablaModel.addRow(new Object[]{"1",info.productos[9].nombre,info.productos[9].pvp,
-										info.productos[9].pvp});
-								to=to+info.productos[9].pvp;
+								aux=new LineaPedido(info.productos[9], 1);
 							}
 							else
 							{
-								TablaModel.addRow(new Object[]{Pantalla.getText(),info.productos[9].nombre,info.productos[9].pvp,
-									info.productos[9].pvp*new Integer(Pantalla.getText())});
-								to=to+(info.productos[9].pvp)*new Float(Pantalla.getText());
+								aux=new LineaPedido(info.productos[9], new Integer(Pantalla.getText()));
 							}
+							Pantalla.setText("");
+							TablaModel.addRow(aux.getRow());
+							ticket.anyadirLineaPedido(aux);
 						}
 					});
 					
