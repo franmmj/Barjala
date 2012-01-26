@@ -37,4 +37,7 @@ public void setSubtotal(float subtotal) {
 }
 
 
+public Object[] getRow(){
+	return new Object[]{cantidad, item.nombre, item.pvp, subtotal};
+	}
 }

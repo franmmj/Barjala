@@ -101,5 +101,4 @@ public void setId_terminal(int id_terminal) {
 	this.id_terminal = id_terminal;
 }
 
-
 }
